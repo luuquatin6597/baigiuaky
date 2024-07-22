@@ -1,0 +1,130 @@
+.collection {
+  padding: 30px 0;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 992px) {
+  .collection {
+    background-color: #ffffff;
+  }
+}
+.collection .title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+.collection .title .subTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.collection .title a {
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+  font-size: 15px;
+}
+.collection .title a svg {
+  height: 15px;
+}
+.collection .title a svg path {
+  transition: all 0.5s;
+}
+.collection .title a:hover {
+  letter-spacing: 1.5px;
+  color: var(--color_main);
+}
+.collection .title a:hover svg path {
+  fill: var(--color_main);
+}
+.collection .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+@media screen and (min-width: 993px) {
+  .collection .gallery {
+    box-shadow: 0px 0px 30px 0px rgba(40, 40, 40, 0.12);
+  }
+}
+.collection .gallery .bodyItem {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .collection .gallery .bodyItem {
+    width: 33.3333333333%;
+  }
+}
+.collection .gallery .bodyItem a {
+  display: block;
+  position: relative;
+  border-radius: var(--border_radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+.collection .gallery .bodyItem a:first-child {
+  margin-bottom: 20px;
+}
+.collection .gallery .bodyItem a:after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-clip-path: circle(0 at 50% 50%);
+          clip-path: circle(0 at 50% 50%);
+  background: rgba(232, 159, 72, 0.5);
+  width: 100%;
+  height: 100%;
+  transition: -webkit-clip-path 1s;
+  transition: clip-path 1s;
+  transition: clip-path 1s, -webkit-clip-path 1s;
+  filter: brightness(0.75);
+}
+.collection .gallery .bodyItem a span {
+  position: absolute;
+  z-index: 2;
+  bottom: 25px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  padding: 5px 10px;
+  left: 25px;
+  color: var(--color2);
+  font-size: 1.25rem;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.75s 0.5s;
+  transform: translateX(-100px);
+}
+@media screen and (max-width: 1024px) {
+  .collection .gallery .bodyItem a span {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
+.collection .gallery .bodyItem a:hover:after {
+  -webkit-clip-path: circle(200% at 0 100%);
+          clip-path: circle(200% at 0 100%);
+}
+.collection .gallery .bodyItem a:hover span {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}/*# sourceMappingURL=collection.css.map */

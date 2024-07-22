@@ -1,0 +1,119 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 97;
+    transition: transform 0.4s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+
+    @media screen and (max-width: 1200px) {
+        padding: 10px 0;
+    }
+
+    .row.inner {
+        justify-content: space-between;
+    }
+
+    .left {
+        @media screen and (max-width: 1199px) {
+            width: 20%;
+        }
+    }
+
+    .logo {
+        @media screen and (min-width: 1200px) {
+            img {
+                max-width: 168px;
+            }
+        }
+    }
+
+    .navigation {
+        list-style: none;
+        padding-left: 15px;
+        .item {
+            padding: 35px 15px;
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            &.active,
+            &:hover {
+                color: var(--color_main);
+            }
+            span {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .customerBox {
+        &.row {
+            gap: 1.5rem;
+            @media screen and (max-width: 1199px) {
+                gap: 1.25rem;
+            }
+        }
+
+        .item {
+            cursor: pointer;
+        }
+
+        svg {
+            height: 18.75px;
+            @media screen and (max-width: 1199px) {
+                height: 16px;
+            }
+            path {
+                fill: var(--color1);
+            }
+        }
+        .search {
+            input[type="text"] {
+                background: transparent;
+                border: none;
+                outline: none;
+                box-shadow: 0;
+                background: #fff;
+                padding: 2.5px 15px;
+                width: 100%;
+                line-height: 1;
+                color: var(--color1);
+                border-bottom: 1px solid #f2f2f2;
+                font-size: 16px;
+                &::placeholder {
+                    color: var(--color1);
+                }
+                @media screen and (max-width: 1199px) {
+                    padding: 5px 15px;
+                    max-width: 145px;
+                }
+            }
+            button[type="submit"] {
+                background: transparent;
+                border: none;
+                outline: none;
+                padding: 0;
+                box-shadow: 0;
+            }
+        }
+        .wishList,
+        .cart {
+            position: relative;
+            .count {
+                background: var(--color_main);
+                width: 20px;
+                height: 20px;
+                line-height: 18px;
+                color: #ffffff;
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                border-radius: 999px;
+                font-size: 0.9rem;
+                text-align: center;
+            }
+        }
+    }
+}
