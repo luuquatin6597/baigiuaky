@@ -48,17 +48,22 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        padding: 20px 10px;
+        @media screen and (min-width: 768px) {
+            padding: 20px 10px;
+        }
         @media screen and (min-width: 993px) {
             box-shadow: 0px 0px 30px 0px rgba(40, 40, 40, 0.12);
         }
         margin-top: 20px;
         border-radius: 12px;
+        @media screen and (max-width: 767px) {
+            gap: 20px;
+        }
         .bodyItem {
-            padding-left: 10px;
-            padding-right: 10px;
             width: 100%;
             @media screen and (min-width: 768px) {
+                padding-left: 10px;
+                padding-right: 10px;
                 width: calc(100% / 3);
             }
             a {
