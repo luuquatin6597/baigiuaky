@@ -179,6 +179,11 @@
   max-height: 100%;
   min-width: 1px;
   min-height: 1px;
+  transition: all 0.5s;
+}
+.superSale .body .item .img .thumb.hover {
+  opacity: 0;
+  visibility: hidden;
 }
 .superSale .body .item .img .listThumb {
   display: flex;
@@ -194,6 +199,14 @@
 }
 .superSale .body .item .img .listThumb img {
   height: 40px;
+}
+.superSale .body .item .img:hover .thumb:not(.hover) {
+  opacity: 0;
+  visibility: hidden;
+}
+.superSale .body .item .img:hover .thumb.hover {
+  opacity: 1;
+  visibility: visible;
 }
 .superSale .body .item .detail {
   padding: 15px;
@@ -240,6 +253,9 @@
 .superSale .body .item .name a {
   font-size: 18px;
   color: var(--color1);
+}
+.superSale .body .item .name a:hover {
+  color: var(--color_main);
 }
 .superSale .body .item .price {
   display: flex;
@@ -297,4 +313,10 @@
   margin-top: 5px;
   outline: none;
   box-shadow: none;
+  cursor: pointer;
+}
+.superSale .body .item .btn:hover {
+  color: var(--color1);
+  background: var(--color_main);
+  border-color: var(--color_main);
 }/*# sourceMappingURL=superSale.css.map */
